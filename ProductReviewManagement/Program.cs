@@ -40,10 +40,18 @@ namespace ProductReviewManagement
                             Console.WriteLine("------------------------------------");
                             Console.WriteLine(products.ProductId + " | " + products.UserId + " | " +
                                               products.rating + " | " + products.review + " | " + products.islike);
+                            Console.WriteLine("------------------------------------");
                         }
                         break;
                     case 2:
+                        Console.WriteLine("------------------------------------");
                         Productmanagement.Top3Records(productreviewlist);
+                        Console.WriteLine("------------------------------------");
+                        break;
+                    case 3:
+                        Console.WriteLine("------------------------------------");
+                        Productmanagement.GetData(productreviewlist);
+                        Console.WriteLine("------------------------------------");
                         break;
                 }
             }
