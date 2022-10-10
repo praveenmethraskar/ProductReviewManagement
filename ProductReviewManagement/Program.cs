@@ -30,11 +30,12 @@ namespace ProductReviewManagement
             while (check)
             {
                 Console.WriteLine("1) Display All The Product Details\n" +
-                                                  "2) Retrieve top 3 records from the list who’s rating is high\n" +
-                                                  "3) Retrieve all record from the list who’s rating are greater then 3 and productID is 1 or 4 or 9\n" +
-                                                  "4) Retrieve count of review present for each productID\n" +
-                                                  "5) Retrieve only productId and review from the list for all records\n" +
-                                                  "6) Skip Top 5 records from list and Display others");
+                                  "2) Retrieve top 3 records from the list who’s rating is high\n" +
+                                  "3) Retrieve all record from the list who’s rating are greater then 3 and productID is 1 or 4 or 9\n" +
+                                  "4) Retrieve count of review present for each productID\n" +
+                                  "5) Retrieve only productID and review from the list for all records\n" +
+                                  "6) Skip Top 5 records from list and Display others\n" +
+                                  "7) Retrieve only productID and review from the list for all records\n");
                 int option = int.Parse(Console.ReadLine());
                 switch (option)
                 {
@@ -71,6 +72,13 @@ namespace ProductReviewManagement
                         Console.WriteLine("------------------------------------");
                         Productmanagement.SkipTop5(productreviewlist);
                         Console.WriteLine("------------------------------------");
+                        break;
+                    case 7:
+                        Console.WriteLine("------------------------------------");
+                        Productmanagement.RetriveProductIDandReview(productreviewlist);
+                        Console.WriteLine("------------------------------------");
+                        break;
+                    default: Console.WriteLine("enter valid number");
                         break;
                 }
             }
